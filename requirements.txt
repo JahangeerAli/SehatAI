@@ -1,0 +1,10 @@
+streamlit
+scikit-learn
+xgboost
+shap
+pytesseract
+pillow
+pandas
+numpy
+supabase
+joblib
