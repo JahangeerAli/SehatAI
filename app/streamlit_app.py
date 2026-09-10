@@ -13,10 +13,15 @@ from utils.fusion_utils import fuse_features
 st.set_page_config(page_title="SehatAI", page_icon="🏥", layout="wide")
 
 # ---- Load models ----
-diabetes_model = joblib.load("models/diabetes_model.pkl")
-cardio_model = joblib.load("models/cardio_model.pkl")
-diabetes_features = joblib.load("models/diabetes_features.pkl")
-cardio_features = joblib.load("models/cardio_features.pkl")
+# ---- Load models ----
+BASE_DIR = Path(__file__).resolve().parent
+MODEL_DIR = BASE_DIR / "models"
+
+diabetes_model = joblib.load(MODEL_DIR / "diabetes_model.pkl")
+cardio_model = joblib.load(MODEL_DIR / "cardio_model.pkl")
+
+diabetes_features = joblib.load(MODEL_DIR / "diabetes_features.pkl")
+cardio_features = joblib.load(MODEL_DIR / "cardio_features.pkl")
 
 st.title("🏥 SehatAI — Rural Health Risk & Triage Copilot")
 
