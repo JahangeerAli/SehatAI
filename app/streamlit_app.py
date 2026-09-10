@@ -3,18 +3,25 @@ import joblib
 import pandas as pd
 import shap
 from PIL import Image
-import sys, os
+from pathlib import Path
+import sys
+import os
 
-sys.path.append(os.path.dirname(__file__))
+# Add app directory to Python path
+BASE_DIR = Path(__file__).resolve().parent
+sys.path.insert(0, str(BASE_DIR))
+
 from utils.ocr_utils import extract_report_values
 from utils.nlp_utils import parse_symptoms
 from utils.fusion_utils import fuse_features
 
-st.set_page_config(page_title="SehatAI", page_icon="🏥", layout="wide")
+st.set_page_config(
+    page_title="SehatAI",
+    page_icon="🏥",
+    layout="wide"
+)
 
 # ---- Load models ----
-# ---- Load models ----
-BASE_DIR = Path(__file__).resolve().parent
 MODEL_DIR = BASE_DIR / "models"
 
 diabetes_model = joblib.load(MODEL_DIR / "diabetes_model.pkl")
