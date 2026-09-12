@@ -1477,4 +1477,3 @@ blue lips, uncontrolled bleeding, or other serious
 emergency symptoms, seek urgent medical care.
         """
     )
-```
