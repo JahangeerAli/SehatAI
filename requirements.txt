@@ -1,10 +1,11 @@
 streamlit
-scikit-learn
-xgboost
-shap
-pytesseract
-pillow
 pandas
 numpy
-supabase
+scikit-learn
+xgboost
 joblib
+pillow
+pytesseract
+supabase
+groq
+pypdf
