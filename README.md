@@ -94,14 +94,3 @@ git push -u origin main
 | Version control | GitHub | https://github.com |
 
 ---
-
-## 🛠️ Troubleshooting
-
-- **"Model file not found" in Streamlit** → make sure `models/*.pkl` files are actually
-  pushed to GitHub and paths match (`models/diabetes_model.pkl` relative to repo root).
-- **OCR not working on Streamlit Cloud** → make sure `packages.txt` (with `tesseract-ocr`)
-  is in the repo root — Streamlit Cloud reads it automatically to install system packages.
-- **Supabase insert fails** → double check `SUPABASE_URL` / `SUPABASE_KEY` in Secrets,
-  and that you ran `supabase_schema.sql` to create the table first.
-- **Cardio dataset target column name mismatch** → open the CSV and check if the label
-  column is `condition` or `target`; update `train_models.py` accordingly if needed.
